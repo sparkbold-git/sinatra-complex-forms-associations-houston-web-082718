@@ -1,1 +1,9 @@
-index.erb
+<h1>THIS IS INDEX.ERB PAGE of OWNER</h1>
+<% @owners.each do |owner| %>
+  <p>Owner name: <%= owner.name %></p>
+  <p>Pet(s):
+  <% owner.pets.each do |pet| %>
+    <%= pet.name %>
+    <% end %>
+  </p>
+<% end %>

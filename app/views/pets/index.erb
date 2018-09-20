@@ -1,1 +1,6 @@
-index.erb
+<h1>THIS IS INDEX.ERB PAGE of PET</h1>
+<h2>You got <%= Pet.all.size %> pets! And here are their names:</h2>
+<% Pet.all.each do |pet| %>
+  <%# binding.pry %>
+  <p>Pet name: <a href="/pets/<%= pet.id %>"><%= pet.name %></a></p>
+<% end %>
